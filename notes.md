@@ -113,4 +113,35 @@ ol, ul {}
 #some-unique-element {}
 ```
 
+# CSS Examples
+
+## HTML Setup
+
+Open up the `exercises/ex-3-1-basics.html` in Atom and take a look.
+Open it in your browser too. Start adding some basic style rules
+in the `head` of the document to see what happens.
+
+---
+
+### Try these examples
+
+```css
+body {
+  background-color: #ff0000;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+body {
+  font-family: "Comic Sans MS";
+}
+
+
+```
+
+
+## Typography
+
   
