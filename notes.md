@@ -313,6 +313,8 @@ ul {
 
 # Homework
 
+---
+
 Take the Recipe document you created in Session 2 and give it some styles! Don't
 be afraid to add classes to your HTML elements in order to target them more easily
 with CSS rules.
