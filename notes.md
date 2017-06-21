@@ -85,7 +85,7 @@ are targeting with our rule). Inside the `{}` characters, individual
 ## Selecting multiple elements
 
 ```css
-/* A rule can a single element */
+/* A rule can target a single element */
 h1 {
   font-size: 24px;
 }
@@ -184,6 +184,12 @@ This is why it's often a good idea to define a series of fonts to act as
 _fallbacks_ when you declare `font-family` properties. `serif` and `sans-serif`
 are special keywords that will use whatever the system default is on the user's
 machine -- good to add this one last, as a last resort.
+
+---
+
+[This page](http://www.cssfontstack.com/) is a good list of some common built-in fonts on Mac and PC systems.
+Feel free to use any of these in your CSS, just make sure to define fallbacks
+for users who don't have them installed.
 
 ---
 
@@ -304,6 +310,12 @@ ul {
 /* what happens when you set a value of 'none' ? */
 
 ```
+
+# Homework
+
+Take the Recipe document you created in Session 2 and give it some styles! Don't
+be afraid to add classes to your HTML elements in order to target them more easily
+with CSS rules.
 
 
 
