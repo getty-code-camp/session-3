@@ -258,13 +258,23 @@ body <span class="kw">{</span>
 <li class="fragment">hexadecimal strings (need to start with #): <code>#ff0000</code>, <code>#333333</code></li>
 <li class="fragment">RGB values like <code>rgb(255, 255, 255)</code>.</li>
 </ul>
-<p>You can find a complete list of predefined color values <a href>here</a></p>
+<p>You can find a complete list of predefined color values <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">here</a></p>
 </section><section class="slide level2">
 
 <p>Try writing some rules that change the <code>color</code> of text elements, or the <code>background-color</code> of <code>body</code>, <code>.body-text</code>, or <code>section</code></p>
 </section><section class="slide level2">
 
 <h3 id="lists">Lists</h3>
+<p>You can control lists too. <code>ol</code> and <code>ul</code> elements can accept many different values for the <code>list-style-type</code> property:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">ol <span class="kw">{</span>
+  <span class="kw">list-style-type:</span> <span class="dt">lower-roman</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+ul <span class="kw">{</span>
+  <span class="kw">list-style-type:</span> <span class="dt">square</span>
+<span class="kw">}</span>
+
+<span class="co">/* what happens when you set a value of 'none' ? */</span></code></pre></div>
 </section></section>
     </div>
   </div>
