@@ -127,6 +127,9 @@ body <span class="kw">{</span>
 <span class="kw">}</span></code></pre></div>
 </section><section class="slide level2">
 
+<p>Don't forget the closing braces and the semicolons, they're mandatory!</p>
+</section><section class="slide level2">
+
 <p>A CSS Rule always starts with a <strong>selector</strong> (which controls what elements we are targeting with our rule). Inside the <code>{}</code> characters, individual <strong>properties</strong> are given <strong>values</strong>.</p>
 </section><section id="selecting-multiple-elements" class="slide level2">
 <h2>Selecting multiple elements</h2>
@@ -153,6 +156,115 @@ ol, ul <span class="kw">{}</span>
 
 <span class="co">/* Select by ID with &quot;#&quot; */</span>
 <span class="fl">#some-unique-element</span> <span class="kw">{}</span></code></pre></div>
+</section></section>
+<section><section id="css-examples" class="titleslide slide level1"><h1>CSS Examples</h1></section><section id="html-setup" class="slide level2">
+<h2>HTML Setup</h2>
+<p>Open up the <code>exercises/ex-3-1-basics.html</code> in Atom and take a look. Open it in your browser too. Start adding some basic style rules in the <code>head</code> of the document to see what happens.</p>
+</section><section class="slide level2">
+
+<h3 id="try-these-examples">Try these examples</h3>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">body <span class="kw">{</span>
+  <span class="kw">background-color:</span> <span class="dt">#ff0000</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+h1 <span class="kw">{</span>
+  <span class="kw">font-size:</span> <span class="dt">36px</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+body <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&quot;Comic Sans MS&quot;</span><span class="kw">;</span>
+<span class="kw">}</span>
+</code></pre></div>
+</section><section id="typography" class="slide level2">
+<h2>Typography</h2>
+<p>Open up the <code>exercises/ex-3-2-typography.html</code> file and follow along.</p>
+</section><section class="slide level2">
+
+<h3 id="font-family">Font Family</h3>
+<p>One of the first things you probably want to know is how to get rid of the dreaded <em>Times New Roman</em>, right?</p>
+</section><section class="slide level2">
+
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">
+h1, h2, h3, h4, h5, h6 <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&quot;Helvetica&quot;</span>, <span class="st">&quot;Arial&quot;</span>, <span class="dt">sans-serif</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<p>Any font installed on your machine will work <em>locally</em>, but if you want to make sure that everyone sees the same thing you need to chose fonts carefully.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Try this - do you see anything change? */</span>
+
+h1, h2, h3, h4, h5, h6 <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&quot;Futura&quot;</span>, <span class="st">&quot;Helvetica&quot;</span>, <span class="st">&quot;Arial&quot;</span>, <span class="dt">sans-serif</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<p>This is why it's often a good idea to define a series of fonts to act as <em>fallbacks</em> when you declare <code>font-family</code> properties. <code>serif</code> and <code>sans-serif</code> are special keywords that will use whatever the system default is on the user's machine -- good to add this one last, as a last resort.</p>
+</section><section class="slide level2">
+
+<h3 id="font-style">Font Style</h3>
+<p>You can also specify whether text should be bold, italic, normal, or underlined.</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">
+h1, h2, h3, h4, h5, h6 <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&quot;Helvetica&quot;</span>, <span class="st">&quot;Arial&quot;</span>, <span class="dt">sans-serif</span><span class="kw">;</span>
+  <span class="kw">font-weight:</span> <span class="dt">bold</span><span class="kw">;</span> <span class="co">/* try italic, normal too */</span>
+  <span class="kw">text-decoration:</span> <span class="dt">underline</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<h3 id="text-alignment">Text Alignment</h3>
+<p>Just like in Word, you can control whether text should be left, center, or right-aligned. You can also justify text (though it looks bad without hyphenation.)</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* possible values: left, right, center, justify */</span>
+<span class="fl">.body-text</span> p <span class="kw">{</span>
+  <span class="kw">text-align:</span> <span class="dt">left</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<h3 id="text-spacing">Text spacing</h3>
+<p>You can control both <code>line-height</code> and <code>letter-spacing</code> in CSS:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Small changes go a long way here! */</span>
+<span class="fl">.body-text</span> p <span class="kw">{</span>
+  <span class="kw">line-height:</span> <span class="dt">1.6</span><span class="kw">;</span>
+  <span class="kw">letter-spacing:</span> <span class="dt">1px</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<h3 id="font-sizes">Font Sizes</h3>
+<p>The <code>font-size</code> property accepts several different units of measurement, including: <code>px</code>, <code>in</code>, <code>cm</code>, and <code>pt</code>. But most of the time you will want to use <code>em</code> or <code>px</code>.</p>
+<p>Hard-coding specific sizes as <code>px</code> values is probably the easiest method, but using <code>em</code> (a relative measurement) can be quite useful.</p>
+</section><section class="slide level2">
+
+<p>A common pattern looks like this:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Assign a px value to the root element as a baseline */</span>
+body <span class="kw">{</span>
+  <span class="kw">font-size:</span> <span class="dt">16px</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Then set relative values for different parts of the page */</span>
+<span class="fl">.headings</span> <span class="kw">{</span>
+  <span class="kw">font-size:</span> <span class="dt">0.75em</span><span class="kw">;</span> 
+<span class="kw">}</span>
+
+<span class="fl">.body-text</span> <span class="kw">{</span>
+  <span class="kw">font-size:</span> <span class="dt">1.25em</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre></div>
+</section><section class="slide level2">
+
+<p>The <code>em</code> value of these elements will act as a multiplier for the text inside. So we just made all the text in the <code>.heading</code> section 25% smaller, and the <code>.body-text</code> 25% larger, while preserving the relative values of elements to one another.</p>
+</section><section class="slide level2">
+
+<h3 id="colors">Colors</h3>
+<ul>
+<li class="fragment">text: <code>aliceblue</code>, <code>tomato</code></li>
+<li class="fragment">hexadecimal strings (need to start with #): <code>#ff0000</code>, <code>#333333</code></li>
+<li class="fragment">RGB values like <code>rgb(255, 255, 255)</code>.</li>
+</ul>
+<p>You can find a complete list of predefined color values <a href>here</a></p>
+</section><section class="slide level2">
+
+<p>Try writing some rules that change the <code>color</code> of text elements, or the <code>background-color</code> of <code>body</code>, <code>.body-text</code>, or <code>section</code></p>
+</section><section class="slide level2">
+
+<h3 id="lists">Lists</h3>
 </section></section>
     </div>
   </div>
